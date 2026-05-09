@@ -5,7 +5,8 @@
 -- ===============================================================
 CREATE DATABASE IF NOT EXISTS adopta_un_companero;
 USE adopta_un_companero;
-
+SET NAMES utf8mb4;
+SET CHARACTER SET utf8mb4;
 -- Tabla de noticias
 CREATE TABLE noticias (
     id_noticia       INT AUTO_INCREMENT PRIMARY KEY,

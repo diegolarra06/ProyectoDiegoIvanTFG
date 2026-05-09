@@ -1,12 +1,11 @@
-
 import axios from 'axios'
 
 const api = axios.create({
   baseURL: 'http://localhost:8080',
-  withCredentials: true, 
+  withCredentials: true,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 })
 
 api.interceptors.response.use(
@@ -16,7 +15,7 @@ api.interceptors.response.use(
       console.warn('Sesión expirada o no autenticado')
     }
     return Promise.reject(error)
-  }
+  },
 )
 
 export default api
